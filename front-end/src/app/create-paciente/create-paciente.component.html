@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Criar um novo paciente</h1>
+<div mat-dialog-content>
+  <br />
+  <mat-form-field>
+    <mat-label>Digite seu paciente</mat-label>
+    <textarea matInput [formControl]="paciente" required></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button>Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="criarNovoPaciente();">Ok</button>
+</div>

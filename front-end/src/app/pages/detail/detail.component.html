@@ -1,0 +1,26 @@
+<mat-card class="medico-detail-card">
+  <mat-card-header>
+    <div mat-card-avatar class="medico-detail-image"></div>
+    <mat-card-title>{{medico?.nome}}</mat-card-title>
+  </mat-card-header>
+</mat-card>
+<br />
+<h1>Pacientes do Médico</h1>
+<button mat-flat-button color="primary" (click)="mostrarCriarPaciente()">Novo Paciente</button>
+<div *ngIf="showCriarPaciente == true">
+  <app-create-paciente [idMedico]="medico?.id" (newPacienteEvent)="atualizarPacientes()"></app-create-paciente>
+</div>
+<mat-card *ngFor="let item of paciente" style="margin-top: 30px;">
+  <mat-card-header>
+    <mat-card-title>nome: {{item.nomePaciente}}</mat-card-title>
+    <mat-card-title>cpf: {{item.cpf}}</mat-card-title>
+    <mat-card-title>data de nascimento: {{item.dtNascimento}}</mat-card-title>
+    <mat-card-title>telefone: {{item.telefone}}</mat-card-title>
+    <mat-card-subtitle>email:{{item.email}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content style="margin: 25px 0 25px 0;">
+  </mat-card-content>
+</mat-card>
+
+<a routerLink="/">Ver todos os médicos</a>
+
