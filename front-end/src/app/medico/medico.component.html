@@ -1,0 +1,17 @@
+<div class="medico-container" *ngIf="medicos && medicos.length > 0">
+  <mat-card class="medico" *ngFor="let item of medicos">
+    <mat-card-header>
+      <div mat-card-avatar class="medico-header-image"></div>
+      <mat-card-title>{{ item.nome }}</mat-card-title>
+      <mat-card-subtitle>cpf: {{ item.cpf }}</mat-card-subtitle>
+      <mat-card-subtitle>especialização: {{ item.especializacao }}</mat-card-subtitle>
+      <mat-card-subtitle>crm: {{ item.crm }}</mat-card-subtitle>
+      <mat-card-subtitle>telefone: {{ item.telefone }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="redirectToDetail(item.id)">Ver Médico</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

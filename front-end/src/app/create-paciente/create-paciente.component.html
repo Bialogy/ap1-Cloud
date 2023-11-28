@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Criar um novo paciente</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Nome do Paciente</mat-label>
+    <textarea matInput [formControl]="nomePaciente" required></textarea>
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>CPF</mat-label>
+    <textarea matInput [formControl]="cpf" required></textarea>
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>Data de Nascimento</mat-label>
+    <textarea matInput [formControl]="dtNascimento" required></textarea>
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>Telefone</mat-label>
+    <textarea matInput [formControl]="telefone" required></textarea>
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <textarea matInput [formControl]="email" required></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button>Cancelar</button>
+  <button mat-button cdkFocusInitial (click)="criarNovoPaciente();">Ok</button>
+</div>
