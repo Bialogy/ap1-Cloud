@@ -2,7 +2,7 @@ export interface PacienteModel {
   id?:Number;
   nomePaciente?:String;
   cpf?:String;
-  dtNascimento?:Date;
+  dtNascimento?:String;
   telefone?:String;
   email?:String;
 }

@@ -25,22 +25,4 @@ export class MedicoComponent implements OnInit{
       this.router.navigate(["detail", id]);
   }
 
-  //CICLO DO VIDA DO COMPONENTE DO ANGULAR
-  /*
-  ngBeforeViewInit(): void {
-
-  }
-
-  ngAfterViewInit(): void {
-
-  }
-
-  ngChanges(): void {
-
-  }
-
-  ngOnDestroy(): void {
-
-  }
-  */
 }

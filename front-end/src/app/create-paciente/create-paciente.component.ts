@@ -12,7 +12,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 })
 export class CreatePacienteComponent {
-  paciente = new FormControl('', [Validators.required]);
+  nomePaciente = new FormControl('', [Validators.required]);
+  dtNascimento = new FormControl('', [Validators.required]);
+  cpf = new FormControl('', [Validators.required]);
+  telefone = new FormControl('', [Validators.required]);
+  email = new FormControl('', [Validators.required]);
   @Output() newPacienteEvent = new EventEmitter();
   @Input() idMedico:any = '';
 
@@ -21,13 +25,33 @@ export class CreatePacienteComponent {
   }
 
   public criarNovoPaciente() {
-    if (this.paciente.hasError("required")) {
+    if (this.nomePaciente.hasError("required")) {
+      return;
+    }
+
+    if (this.dtNascimento.hasError("required")) {
+      return;
+    }
+
+    if (this.cpf.hasError("required")) {
+      return;
+    }
+
+    if (this.telefone.hasError("required")) {
+      return;
+    }
+
+    if (this.email.hasError("required")) {
       return;
     }
 
     let paciente: PacienteModel = {
 
-      nomePaciente: this.paciente.value as string,
+      nomePaciente: this.nomePaciente.value as string,
+      dtNascimento: this.dtNascimento.value as string,
+      cpf: this.cpf.value as string,
+      telefone: this.telefone.value as string,
+      email: this.email.value as string,
 
     };
 
